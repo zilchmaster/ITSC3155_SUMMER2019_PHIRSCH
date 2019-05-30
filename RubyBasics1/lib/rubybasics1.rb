@@ -12,21 +12,25 @@ end
 
 # Part III
 def sum_to_n? arr, n
-  # YOUR CODE HERE
   if (arr.length == 0)
     return false
   end
   if (arr.length == 1)
     return false
   end
+  sorted_arr = arr.sort
+  head =0
+  tail = sorted_arr.length-1
   
-  for x in (0..(arr.length-2))
-    for y in ((x+1)...arr.length)
-      
-     return true if arr[x]+arr[y] == n
-        
+  while head < tail 
+    current_sum = sorted_arr[head] + sorted_arr[tail]
+    if current_sum == n
+      return true
+    elsif current_sum < n
+      head = head + 1
+    else 
+      tail = tail - 1
     end
   end
-  
   return false
 end
