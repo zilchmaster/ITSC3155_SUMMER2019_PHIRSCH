@@ -9,6 +9,16 @@ end
 # Part II
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if (s.length == 0)
+    return false
+  
+  elsif ( /[a-z]/ === s[0].downcase && /[^aeiou]/ === s[0].downcase)
+    return true
+  
+  else
+    return false
+  end
+
 end
 
 # Part III
