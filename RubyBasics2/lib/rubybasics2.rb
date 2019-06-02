@@ -24,4 +24,7 @@ end
 # Part III
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  return true if s == "0"
+	/^[10]*00$/.match(s) != nil
+  
 end
