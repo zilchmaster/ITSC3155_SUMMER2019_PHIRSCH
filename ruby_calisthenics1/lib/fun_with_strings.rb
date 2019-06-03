@@ -5,6 +5,19 @@ module FunWithStrings
   end
   def count_words
     # your code here
+    myHash = Hash.new
+
+    self.downcase.gsub(/[^a-z\s]/,'').split.each do |word|
+
+      if myHash[word] != nil
+        myHash[word] += 1
+      else
+        myHash[word] = 1
+      end
+    end
+    
+    myHash
+  
   end
   def anagram_groups
     # your code here
