@@ -9,5 +9,13 @@ class BookInStock
         # your code here
         @isbn = isbn
         @price = price
+        
+        if isbn == ''
+            raise ArgumentError
+        end
+        if price <= 0
+            raise ArgumentError
+        end
+        
     end
 end
